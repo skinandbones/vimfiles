@@ -75,7 +75,7 @@ set backupdir=~/.vim/_backup      " where to put backup files.
 set directory=~/.vim/_temp        " where to put swap files.
 
 " ignore Rubinius, Sass cache files
-set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc
+set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc,*.as,vendor/**,projects/digital_invitation_studio/**,*.png,*.jpg,*.jpeg,*.gif,*.ico,*.swf
 
 " KEYBINDINGS / COMMANDS
 
@@ -92,7 +92,7 @@ nmap <C-X>3 :vsplit<CR>
 command! KillWhitespace :normal :%s/ *$//g<cr><c-o><cr>
 
 " disable cursor keys in normal mode
-map <Left>  :echo "no!"<cr>
-map <Right> :echo "no!"<cr>
-map <Up>    :echo "no!"<cr>
-map <Down>  :echo "no!"<cr>
+" map <Left>  :echo "no!"<cr>
+" map <Right> :echo "no!"<cr>
+" map <Up>    :echo "no!"<cr>
+" map <Down>  :echo "no!"<cr>
