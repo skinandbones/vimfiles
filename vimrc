@@ -7,7 +7,7 @@ set encoding=utf-8
 
 call pathogen#infect()
 filetype plugin indent on         " Turn on file type detection.
-" runtime macros/matchit.vim        " Load the matchit plugin.
+runtime macros/matchit.vim        " Load the matchit plugin.
 
 " VISUAL
 colorscheme twilight
@@ -96,3 +96,6 @@ command! KillWhitespace :normal :%s/ *$//g<cr><c-o><cr>
 " map <Right> :echo "no!"<cr>
 " map <Up>    :echo "no!"<cr>
 " map <Down>  :echo "no!"<cr>
+
+" Command-T
+let g:CommandTMaxHeight=20

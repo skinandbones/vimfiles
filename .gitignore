@@ -1,1 +1,4 @@
 .netrwhist
+.sass-cache
+_temp/*
+_backup/*
