@@ -16,7 +16,7 @@ set ruler                         " Show cursor position.
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
 set incsearch                     " Highlight matches as you type.
-set hlsearch                      " Highlight matches.
+" set hlsearch                      " Highlight matches.
 
 set nowrap                        " Turn off line wrapping in intelligent side scrolling
 set sidescroll=5
@@ -86,9 +86,6 @@ set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc,*.as,vendor/**,projects/digita
 nmap <C-X>2 :split<CR>
 nmap <C-X>3 :vsplit<CR>
 
-" Tags
-" map <Leader>rt :!ctags -R --exclude=.git --exclude=log --exclude=projects --exclude=flex --exclude=public --exclude=vendor *<CR><CR>
-
 command! KillWhitespace :normal :%s/ *$//g<cr><c-o><cr>
 
 " disable cursor keys in normal mode
@@ -99,3 +96,8 @@ command! KillWhitespace :normal :%s/ *$//g<cr><c-o><cr>
 
 " Command-T
 let g:CommandTMaxHeight=20
+
+" NORMAL mode mappings
+
+" spacebar center the current line
+nmap <space> zz
