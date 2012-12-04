@@ -24,8 +24,14 @@ imap <Leader>= <Esc> <C-w>=
 
 if has("gui_macvim")
   macmenu &File.New\ Tab key=<nop>
+
   map <D-t> :CommandT<CR>
   map <D-r> :CommandTBuffer<CR>
+
+  macmenu Window.Select\ Next\ Tab key=<nop>
+  macmenu Window.Select\ Previous\ Tab key=<nop>
+  map <D-{> :bp<CR>
+  map <D-}> :bn<CR>
 endif
 
 

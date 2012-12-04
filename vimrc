@@ -101,3 +101,9 @@ let g:CommandTMaxHeight=20
 
 " spacebar center the current line
 nmap <space> zz
+
+" ctrlp customization
+set runtimepath^=~/.vim/bundle/ctrlp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
