@@ -1,7 +1,7 @@
 " Example Vim graphical configuration.
 " Copy to ~/.gvimrc or ~/_gvimrc.
 
-set guifont=DejaVu\ Sans\ Mono:h12
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
 set antialias                     " MacVim: smooth fonts.
 set guioptions-=T                 " Hide toolbar.
 set lines=50 columns=200          " Window dimensions.
@@ -27,3 +27,8 @@ if has("gui_macvim")
   map <D-t> :CommandT<CR>
   map <D-r> :CommandTBuffer<CR>
 endif
+
+
+" Powerline - requires customized fonts package.  See fontpatcher readme in
+" bundle/powerliner/fontpatcher.
+let g:Powerline_symbols = 'fancy'
