@@ -23,18 +23,21 @@ map <Leader>= <C-w>=
 imap <Leader>= <Esc> <C-w>=
 
 if has("gui_macvim")
+  " Powerline - requires customized fonts package.  See fontpatcher readme in
+  " bundle/powerliner/fontpatcher.
+  let g:Powerline_symbols = 'fancy'
+
   macmenu &File.New\ Tab key=<nop>
-
-  map <D-t> :CommandT<CR>
-  map <D-r> :CommandTBuffer<CR>
-
+  macmenu &File.Close key=<nop>
   macmenu Window.Select\ Next\ Tab key=<nop>
   macmenu Window.Select\ Previous\ Tab key=<nop>
-  map <D-{> :bp<CR>
-  map <D-}> :bn<CR>
+
+  map <D-t> :CtrlP<CR>
+  map <D-r> :CtrlPBuffer<CR>
+  map <D-e> :CtrlPMRUFiles<CR>
+  map <D-{> :BB<CR>
+  map <D-}> :BF<CR>
+  map <D-w> :BD<CR>
 endif
 
 
-" Powerline - requires customized fonts package.  See fontpatcher readme in
-" bundle/powerliner/fontpatcher.
-let g:Powerline_symbols = 'fancy'

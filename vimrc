@@ -106,4 +106,4 @@ nmap <space> zz
 set runtimepath^=~/.vim/bundle/ctrlp
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-
+let g:ctrlp_match_window_reversed = 0
