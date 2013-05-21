@@ -10,7 +10,8 @@ filetype plugin indent on         " Turn on file type detection.
 runtime macros/matchit.vim        " Load the matchit plugin.
 
 " VISUAL
-colorscheme twilight
+" colorscheme twilight
+colorscheme github
 set number                        " Show line numbers.
 set ruler                         " Show cursor position.
 set showcmd                       " Display incomplete commands.
@@ -49,6 +50,7 @@ if has("autocmd")
   au BufNewFile,BufRead *.json set ft=javascript
 
   " JST files should use mustache
+  au BufNewFile,BufRead *.jst set ft=html
   " au BufNewFile,BufRead *.jst set ft=mustache
 
   " make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
@@ -94,9 +96,6 @@ command! KillWhitespace :normal :%s/ *$//g<cr><c-o><cr>
 " map <Up>    :echo "no!"<cr>
 " map <Down>  :echo "no!"<cr>
 
-" Command-T
-let g:CommandTMaxHeight=20
-
 " NORMAL mode mappings
 
 " spacebar center the current line
@@ -107,3 +106,17 @@ set runtimepath^=~/.vim/bundle/ctrlp
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)|node_modules$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
+
+" NERDTree
+map <leader>n :NERDTreeToggle<cr>
+
+" The Silver Searcher (Ack replacement)
+if executable("ag")
+  set grepprg=ag\ --noheading\ --nogroup\ --nocolor
+  let g:ackprg = 'ag --nogroup --nocolor --column'
+endif
+
